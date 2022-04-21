@@ -39,5 +39,18 @@ class PostDetailAPIView(RetrieveAPIView):
     serializer_class = PostSerializer
 
 
+class PostUpdateAPIView(UpdateAPIView):
+    permission_classes = []
+    authentication_classes = []
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+
+
+class DestroyAPIView(DestroyAPIView):
+    permission_classes = []
+    authentication_classes = []
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+
 
 
